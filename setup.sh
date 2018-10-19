@@ -44,6 +44,12 @@ setupRofi() {
 
 }
 
+setupWallpapers() {
+	mkdir -p $HOME/.wallpapers
+	ln -sf "$(pwd)/.wallpapers/city.jpg" $HOME/.wallpapers
+
+}
+
 setupi3
 
 setupVim
@@ -55,3 +61,5 @@ setupZsh
 setupPolybar
 
 setupRofi
+
+setupWallpapers
