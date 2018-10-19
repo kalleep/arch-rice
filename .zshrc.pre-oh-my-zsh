@@ -1,0 +1,6 @@
+
+autoload -Uz promptinit
+promptinit
+
+#Promttheme
+prompt suse 
