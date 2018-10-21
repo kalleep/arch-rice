@@ -50,6 +50,11 @@ setupWallpapers() {
 
 }
 
+setupScripts() {
+	mkdir -p $HOME/.scripts
+	ln -sf "$(pwd)/.scripts/i3resize" $HOME/.scripts
+}
+
 setupi3
 
 setupVim
@@ -63,3 +68,5 @@ setupPolybar
 setupRofi
 
 setupWallpapers
+
+setupScripts
