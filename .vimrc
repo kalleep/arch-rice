@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'maralla/completor.vim'
+
 call vundle#end()
 
 " Enable filetype pluings
@@ -78,3 +80,5 @@ set mouse=a
 
 " Transparent backgorund
 hi Normal ctermbg=none
+
+let g:completor_gocode_binary = '~/go/bin/gocode'
