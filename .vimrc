@@ -20,7 +20,7 @@ set softtabstop=0 noexpandtab
 set shiftwidth=4
 
 " Adding linenumber
-set number
+set number relativenumber
 
 " Always show current position
 set ruler
