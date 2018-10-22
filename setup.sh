@@ -51,8 +51,8 @@ setupWallpapers() {
 }
 
 setupScripts() {
-	mkdir -p $HOME/.scripts
-	ln -sf "$(pwd)/.scripts/i3resize" $HOME/.scripts
+	mkdir -p $HOME/.config/scripts
+	ln -sf "$(pwd)/.config/scripts/i3resize" $HOME/.config/scripts
 }
 
 setupi3

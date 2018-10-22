@@ -169,7 +169,7 @@ bindsym $mod+u [instance="popin"] scratchpad show; move position center
 bindsym $mod+x exec --no-startup-id i3lock -i $HOME/.wallpapers/cosmos.png
 
 # Resize
-bindsym $mod+shift+y exec --no-startup-id "bash ~/.scripts/i3resize left" 
-bindsym $mod+shift+u exec --no-startup-id "bash ~/.scripts/i3resize down"
-bindsym $mod+shift+i exec --no-startup-id "bash ~/.scripts/i3resize up" 
-bindsym $mod+shift+o exec --no-startup-id "bash ~/.scripts/i3resize right" 
+bindsym $mod+shift+y exec --no-startup-id "bash ~/.config/scripts/i3resize left" 
+bindsym $mod+shift+u exec --no-startup-id "bash ~/.config/scripts/i3resize down"
+bindsym $mod+shift+i exec --no-startup-id "bash ~/.config/scripts/i3resize up" 
+bindsym $mod+shift+o exec --no-startup-id "bash ~/.config/scripts/i3resize right" 
