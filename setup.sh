@@ -47,7 +47,7 @@ setupRofi() {
 setupWallpapers() {
 	mkdir -p $HOME/.wallpapers
 	ln -sf "$(pwd)/.wallpapers/city.jpg" $HOME/.wallpapers
-
+	ln -sf "$(pwd)/.wallpapers/cosmos.png" $HOME/.wallpapers
 }
 
 setupScripts() {

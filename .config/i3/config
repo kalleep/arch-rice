@@ -54,6 +54,9 @@ exec --no-startup-id urxvt -name popin
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Start xautolock
+exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpapers/cosmos.png"
+
 # Keybord language
 exec "setxkbmap -layout se"
 
@@ -162,6 +165,8 @@ bindsym $mod+d exec rofi -show combi
 
 # Toggle popin terminal
 bindsym $mod+u [instance="popin"] scratchpad show; move position center
+
+bindsym $mod+x exec --no-startup-id i3lock -i $HOME/.wallpapers/cosmos.png
 
 # Resize
 bindsym $mod+shift+y exec --no-startup-id "bash ~/.scripts/i3resize left" 
