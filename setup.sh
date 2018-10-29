@@ -22,7 +22,7 @@ setupX() {
 }
 
 setupZsh() {
-
+	ln -sf "$(pwd)/.zprofile" $HOME
 	ln -sf "$(pwd)/.zshrc" $HOME
 	ln -sf "$(pwd)/.zshrc.pre-oh-my-zsh" $HOME
 	ln -sf "$(pwd)/themes/kalle.zsh-theme" $HOME/.oh-my-zsh/themes
