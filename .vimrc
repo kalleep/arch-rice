@@ -109,6 +109,9 @@ let NERDTreeShowHidden=1
 " Show hidden files in ctrlp
 let g:ctrlp_show_hidden = 1
 
+" Disable vim mode display 
+set noshowmode
+
 " Keymapping
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
