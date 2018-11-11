@@ -18,6 +18,8 @@ Plugin 'itchyny/lightline.vim'
 
 Plugin 'w0ng/vim-hybrid'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
 call vundle#end()
 
 " Enable filetype pluings
@@ -103,6 +105,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " show hidden files in nerdtree
 let NERDTreeShowHidden=1
+
+" Show hidden files in ctrlp
+let g:ctrlp_show_hidden = 1
 
 " Keymapping
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
