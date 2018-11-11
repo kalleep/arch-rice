@@ -1,4 +1,5 @@
 set nocompatible
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -7,9 +8,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'scrooloose/nerdtree'
+
 Plugin 'fatih/vim-go'
 
 Plugin 'maralla/completor.vim'
+
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
@@ -27,7 +32,7 @@ set number relativenumber
 " Always show current position
 set ruler
 
-set cmdheight=2
+set cmdheight=1
 
 " Ignore cacase on search
 set ignorecase 
@@ -78,11 +83,29 @@ set noswapfile
 " Mouse support
 set mouse=a
 
+" Change coursour in insert mode
+let &t_SI = "\<esc>[5 q"
+let &t_SR = "\<esc>[5 q"
+let &t_EI = "\<esc>[2 q"
+
 " Transparent backgorund
 hi Normal ctermbg=none
 
 let g:completor_gocode_binary = '~/go/bin/gocode'
 
+" Auto upen nerdtree
+autocmd vimenter * NERDTree
+
+" Close nerdtree if no windows is open 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" show hidden files in nerdtree
+let NERDTreeShowHidden=1
+
+" Keymapping
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+" Bind control+n to nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
