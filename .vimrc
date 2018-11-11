@@ -16,6 +16,8 @@ Plugin 'maralla/completor.vim'
 
 Plugin 'itchyny/lightline.vim'
 
+Plugin 'w0ng/vim-hybrid'
+
 call vundle#end()
 
 " Enable filetype pluings
