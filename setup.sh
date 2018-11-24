@@ -55,6 +55,11 @@ setupScripts() {
 	ln -sf "$(pwd)/.config/scripts/i3resize" $HOME/.config/scripts
 }
 
+setupCompton() {
+	ln -sf "$(pwd)/.config/compton.conf" $HOME/.config/
+
+}
+
 setupi3
 
 setupVim
@@ -70,3 +75,5 @@ setupRofi
 setupWallpapers
 
 setupScripts
+
+setupCompton

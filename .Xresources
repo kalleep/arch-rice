@@ -34,10 +34,6 @@
 *.color7:  #707880
 *.color15: #9DA8B3
 
-! Fake transparancy
-URxvt*transparent: true
-URxvt*shading: 13 
-
 URxvt.internalBorder: 8
 URxvt.scrollBar: false
 URxvt*font: xft:Hack-Regular:pixelsize=14
