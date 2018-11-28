@@ -39,4 +39,4 @@ URxvt.scrollBar: false
 URxvt*font: xft:Hack-Regular:pixelsize=14
 
 urxvt*transparent: true
-urxvt*shading: 30
+urxvt*shading: 20 
