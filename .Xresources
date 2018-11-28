@@ -1,4 +1,4 @@
-*.background:  	#1D1F21 
+*.background:  	#1d1f21	
 *.foreground:   #C5C8C6 
 *.cursourColor: #C5C6C6 
 
@@ -37,3 +37,6 @@
 URxvt.internalBorder: 8
 URxvt.scrollBar: false
 URxvt*font: xft:Hack-Regular:pixelsize=14
+
+urxvt*transparent: true
+urxvt*shading: 30

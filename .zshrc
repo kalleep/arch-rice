@@ -10,3 +10,5 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+alias rice="vim ~/projects/arch-rice" 

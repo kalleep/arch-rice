@@ -60,10 +60,6 @@ exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpap
 # Keybord language
 exec "setxkbmap -layout se"
 
-# Start compoton
-
-exec_always --no-startup-id compton
-
 # font
 font pango: Hack-Regular 12
 
