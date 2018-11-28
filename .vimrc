@@ -106,6 +106,7 @@ let g:ctrlp_show_hidden = 1
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 " Close nerdtree if no windows is open 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -120,3 +121,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " Bind control+n to nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
+
+noremap <PageUp> <Nop>
+inoremap <PageUp> <Nop>
+
+noremap <PageDown> <Nop>
+inoremap <PageDown> <Nop>
