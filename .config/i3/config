@@ -54,8 +54,16 @@ exec --no-startup-id urxvt -name popin
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Start workspaces
+exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
+exec --no-startup-id i3-msg 'workspace 2; exec firefox'
+exec --no-startup-id i3-msg 'workspace 3; exec urxvt -e ranger'
+exec --no-startup-id i3-msg 'workspace 5; exec urxvt -e htop'
+
+exec --no-startup-id i3-msg 'workspace 4; exec spotify'
+
 # Start xautolock
-exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpapers/cosmos.png"
+# exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpapers/cosmos.png"
 
 # Keybord language
 exec "setxkbmap -layout se"

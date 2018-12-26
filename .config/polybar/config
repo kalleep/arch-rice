@@ -67,7 +67,7 @@ font-2 = "Wuncon siji:pixelsize=10;1"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio cpu memory wlan temperature battery date powermenu
+modules-right = pulseaudio cpu memory wlan temperature battery date
 
 tray-position = right
 tray-padding = 2
@@ -99,28 +99,39 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %con%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.red}
+label-urgent = %icon%
+label-urgent-foreground = ${colors.red}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
-label-separator = |
+; label-separator = |
+
+ws-icon-0 = 1;%{T2}TERMINAL
+ws-icon-1 = 2;%{T2}BROWSER
+ws-icon-2 = 3;%{T2}FILES
+ws-icon-8 = 4;%{T2}MUSIC
+ws-icon-9 = 5;%{T2}STATUS
+ws-icon-3 = 6;%{T2}WS1
+ws-icon-4 = 7;%{T2}WS2
+ws-icon-5 = 8;%{T2}WS3
+ws-icon-6 = 9;%{T2}WS4
+ws-icon-7 = 10;%{T2}WS5
 
 [module/mpd]
 type = internal/mpd
@@ -271,7 +282,7 @@ type = custom/menu
 
 expand-right = true
 
-format-spacing = 1
+format-spacing = 2
 
 label-open = 
 label-open-foreground = ${colors.primary}

@@ -20,6 +20,8 @@ Plugin 'w0ng/vim-hybrid'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'jiangmiao/auto-pairs'
+
 call vundle#end()
 
 " Enable filetype pluings
@@ -84,6 +86,8 @@ set nobackup
 set nowb
 set noswapfile
 
+set laststatus=2
+
 " Mouse support
 set mouse=a
 
@@ -102,14 +106,6 @@ let NERDTreeShowHidden=1
 
 " Show hidden files in ctrlp
 let g:ctrlp_show_hidden = 1
-
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" Close nerdtree if no windows is open 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 " Disable vim mode display 
 set noshowmode
