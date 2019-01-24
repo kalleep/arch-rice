@@ -14,13 +14,21 @@ Plugin 'fatih/vim-go'
 
 Plugin 'maralla/completor.vim'
 
+Plugin 'maralla/completor-typescript'
+
 Plugin 'itchyny/lightline.vim'
 
 Plugin 'w0ng/vim-hybrid'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-
 Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plugin 'junegunn/fzf.vim'
+
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'Shougo/echodoc.vim'
 
 call vundle#end()
 
@@ -38,7 +46,7 @@ set number relativenumber
 " Always show current position
 set ruler
 
-set cmdheight=1
+set cmdheight=2
 
 " Ignore cacase on search
 set ignorecase 
@@ -99,13 +107,16 @@ let &t_EI = "\<esc>[2 q"
 " Transparent backgorund
 hi Normal ctermbg=none
 
-let g:completor_gocode_binary = '~/go/bin/gocode'
-
-" show hidden files in nerdtree
+" Plugin configs
 let NERDTreeShowHidden=1
 
-" Show hidden files in ctrlp
-let g:ctrlp_show_hidden = 1
+let g:echodoc#enable_at_startup = 1
+
+let g:go_fmt_command = "goimports"
+
+let g:completor_gocode_binary = '~/go/bin/gocode'
+
+let g:completor_tsserver_binary = '~/.nvm/versions/node/v8.9.4/bin/tsserver'
 
 " Disable vim mode display 
 set noshowmode
@@ -115,8 +126,10 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
-" Bind control+n to nerdtree toggle
+map <C-p> :GFiles<CR>
 map <C-n> :NERDTreeToggle<CR>
+
+tnoremap <Esc> <C-\><C-n>
 
 noremap <PageUp> <Nop>
 inoremap <PageUp> <Nop>

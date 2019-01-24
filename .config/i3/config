@@ -58,7 +58,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
 exec --no-startup-id i3-msg 'workspace 2; exec firefox'
 exec --no-startup-id i3-msg 'workspace 3; exec urxvt -e ranger'
-exec --no-startup-id i3-msg 'workspace 5; exec urxvt -e htop'
+exec --no-startup-id i3-msg 'workspace 5; exec urxvt -e gtop'
 
 exec --no-startup-id i3-msg 'workspace 4; exec spotify'
 
@@ -69,7 +69,7 @@ exec --no-startup-id i3-msg 'workspace 4; exec spotify'
 exec "setxkbmap -layout se"
 
 # font
-font pango: Hack-Regular 12
+font pango: Hack-Regular 12, ttf-dejavu 12
 
 # mouse
 focus_follows_mouse no
@@ -100,10 +100,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen toggle
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+h split v
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
 
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
