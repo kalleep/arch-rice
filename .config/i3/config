@@ -43,31 +43,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# Popin terminal
-for_window[instance="popin"] floating enable
-for_window[instance="popin"] resize set 800 500 
-for_window[instance="popin"] move position center
-for_window[instance="popin"] move scratchpad
-
-exec --no-startup-id urxvt -name popin
-
-# Start polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Start workspaces
-exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
-exec --no-startup-id i3-msg 'workspace 2; exec firefox'
-exec --no-startup-id i3-msg 'workspace 3; exec urxvt -e ranger'
-exec --no-startup-id i3-msg 'workspace 5; exec urxvt -e gtop'
-
-exec --no-startup-id i3-msg 'workspace 4; exec spotify'
-
-# Start xautolock
-# exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpapers/cosmos.png"
-
-# Keybord language
-exec "setxkbmap -layout se"
-
 # font
 font pango: Hack-Regular 12, ttf-dejavu 12
 
@@ -88,13 +63,30 @@ client.focused          $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
 client.unfocused        $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
 client.focused_inactive $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
 
-# Basic bindings
+# Popin terminal
+for_window[instance="popin"] floating enable
+for_window[instance="popin"] resize set 800 500 
+for_window[instance="popin"] move position center
+for_window[instance="popin"] move scratchpad
+
+exec --no-startup-id urxvt -name popin
+
+# Start polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Start xautolock
+# exec_always --no-startup-id xautolock -time 10 -locker "i3lock -i $HOME/.wallpapers/cosmos.png"
+
+# Keybord language
+exec "setxkbmap -layout se"
+
+# Bindings
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
 # Kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Enter fullscreen
 bindsym $mod+f fullscreen toggle
@@ -114,16 +106,30 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+# Resize
+bindsym $mod+Control+h exec --no-startup-id "bash ~/.config/scripts/i3resize left" 
+bindsym $mod+Control+j exec --no-startup-id "bash ~/.config/scripts/i3resize down"
+bindsym $mod+Control+k exec --no-startup-id "bash ~/.config/scripts/i3resize up" 
+bindsym $mod+Control+l exec --no-startup-id "bash ~/.config/scripts/i3resize right" 
+
+# Show rofi 
+bindsym $mod+d exec rofi -show combi
+
+# Toggle popin terminal
+bindsym $mod+u [instance="popin"] scratchpad show; move position center
+
+bindsym $mod+x exec --no-startup-id i3lock -i $HOME/.wallpapers/cosmos.png
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -165,19 +171,3 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
-# Letter bindings
-
-# Show rofi 
-bindsym $mod+d exec rofi -show combi
-
-# Toggle popin terminal
-bindsym $mod+u [instance="popin"] scratchpad show; move position center
-
-bindsym $mod+x exec --no-startup-id i3lock -i $HOME/.wallpapers/cosmos.png
-
-# Resize
-bindsym $mod+shift+y exec --no-startup-id "bash ~/.config/scripts/i3resize left" 
-bindsym $mod+shift+u exec --no-startup-id "bash ~/.config/scripts/i3resize down"
-bindsym $mod+shift+i exec --no-startup-id "bash ~/.config/scripts/i3resize up" 
-bindsym $mod+shift+o exec --no-startup-id "bash ~/.config/scripts/i3resize right" 

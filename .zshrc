@@ -9,6 +9,8 @@ plugins=(
   git
 )
 
+export EDITOR=vim
+
 source /usr/share/nvm/init-nvm.sh
 
 export NVM_DIR="$HOME/.nvm"
