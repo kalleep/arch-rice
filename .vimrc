@@ -30,14 +30,20 @@ Plugin 'leafgarland/typescript-vim'
 
 Plugin 'Shougo/echodoc.vim'
 
+Plugin 'elzr/vim-json'
+
+Plugin 't9md/vim-choosewin'
+
+Plugin 'ekalinin/Dockerfile.vim'
+
 call vundle#end()
 
 " Enable filetype pluings
 filetype plugin on
 filetype indent on
 
+set noexpandtab
 set tabstop=4
-set softtabstop=0 noexpandtab
 set shiftwidth=4
 
 " Adding linenumber
@@ -49,7 +55,7 @@ set ruler
 set cmdheight=2
 
 " Ignore cacase on search
-set ignorecase 
+set ignorecase
 
 " When searching try to be smart about cases
 set smartcase
@@ -99,16 +105,31 @@ set laststatus=2
 " Mouse support
 set mouse=a
 
+set nocursorcolumn
+set nocursorline
+set updatetime=300
+
+" Increase max memory to show syntax highlighting for large files
+set maxmempattern=20000
+
+" Transparent backgorund
+hi Normal ctermbg=none
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" Auto resize panes
+autocmd VimResized * wincmd =
+
 " Change coursour in insert mode
 let &t_SI = "\<esc>[5 q"
 let &t_SR = "\<esc>[5 q"
 let &t_EI = "\<esc>[2 q"
 
-" Transparent backgorund
-hi Normal ctermbg=none
-
 " Plugin configs
 let NERDTreeShowHidden=1
+
+let g:choosewin_overlay_enable = 1
 
 let g:echodoc#enable_at_startup = 1
 
@@ -118,7 +139,11 @@ let g:completor_gocode_binary = '~/go/bin/gocode'
 
 let g:completor_tsserver_binary = '~/.nvm/versions/node/v8.9.4/bin/tsserver'
 
-" Disable vim mode display 
+let g:hybrid_reduced_contrast = 1
+
+let g:hybrid_custom_term_colors = 1
+
+" Disable vim mode display
 set noshowmode
 
 " Keymapping
@@ -136,3 +161,5 @@ inoremap <PageUp> <Nop>
 
 noremap <PageDown> <Nop>
 inoremap <PageDown> <Nop>
+
+nmap  -  <Plug>(choosewin)
