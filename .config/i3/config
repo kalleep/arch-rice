@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1 
+set $mod Mod1
 
 set_from_resource $darkBlack   color0
 set_from_resource $black       color8
@@ -50,7 +50,7 @@ font pango: Hack-Regular 12, ttf-dejavu 12
 focus_follows_mouse no
 
 # gaps
-gaps inner 10 
+gaps inner 10
 gaps outer 10
 smart_gaps on
 
@@ -65,7 +65,7 @@ client.focused_inactive $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
 
 # Popin terminal
 for_window[instance="popin"] floating enable
-for_window[instance="popin"] resize set 800 500 
+for_window[instance="popin"] resize set 800 500
 for_window[instance="popin"] move position center
 for_window[instance="popin"] move scratchpad
 
@@ -92,7 +92,7 @@ bindsym $mod+q kill
 bindsym $mod+f fullscreen toggle
 
 # split in horizontal orientation
-bindsym $mod+h split v
+bindsym $mod+b split v
 
 # split in vertical orientation
 bindsym $mod+v split h
@@ -118,12 +118,12 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Resize
-bindsym $mod+Control+h exec --no-startup-id "bash ~/.config/scripts/i3resize left" 
+bindsym $mod+Control+h exec --no-startup-id "bash ~/.config/scripts/i3resize left"
 bindsym $mod+Control+j exec --no-startup-id "bash ~/.config/scripts/i3resize down"
-bindsym $mod+Control+k exec --no-startup-id "bash ~/.config/scripts/i3resize up" 
-bindsym $mod+Control+l exec --no-startup-id "bash ~/.config/scripts/i3resize right" 
+bindsym $mod+Control+k exec --no-startup-id "bash ~/.config/scripts/i3resize up"
+bindsym $mod+Control+l exec --no-startup-id "bash ~/.config/scripts/i3resize right"
 
-# Show rofi 
+# Show rofi
 bindsym $mod+d exec rofi -show combi
 
 # Toggle popin terminal
