@@ -7,6 +7,7 @@ ZSH_THEME="kalle"
 # Plugins
 plugins=(
   git
+  zsh-autosuggestions
 )
 
 export EDITOR=vim

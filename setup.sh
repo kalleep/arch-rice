@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
 setupi3() {
-	
+
 	mkdir -p $HOME/.config/i3
 
 	ln -sf "$(pwd)/.config/i3/config" $HOME/.config/i3
 
 }
 
-setupVim() {
+setupNeovim() {
 
-	ln -sf "$(pwd)/.vimrc" $HOME
+	mkdir -p $HOME/.config/nvim
+	ln -sf "$(pwd)/.config/nvim/init.vim" $HOME/.config/nvim
 
 }
 
@@ -26,7 +27,7 @@ setupZsh() {
 	ln -sf "$(pwd)/.zshrc" $HOME
 	ln -sf "$(pwd)/.zshrc.pre-oh-my-zsh" $HOME
 	ln -sf "$(pwd)/themes/kalle.zsh-theme" $HOME/.oh-my-zsh/themes
-	
+
 }
 
 setupPolybar() {
@@ -62,7 +63,7 @@ setupCompton() {
 
 setupi3
 
-setupVim
+setupNeovim
 
 setupX
 
