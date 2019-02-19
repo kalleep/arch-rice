@@ -110,6 +110,8 @@ set lazyredraw
 " Increase max memory to show syntax highlighting for large files
 set maxmempattern=20000
 
+set completeopt-=preview
+
 " Auto resize panes
 autocmd VimResized * wincmd =
 
@@ -122,11 +124,8 @@ hi Normal ctermbg=none
 "
 let NERDTreeShowHidden = 1
 
-let g:echodoc#enable_at_startup = 1
-
-let g:deoplete#enable_at_startup = 1
-
 let g:hybrid_reduced_contrast = 1
+
 let g:hybrid_custom_term_colors = 1
 
 let g:choosewin_overlay_enable = 1
@@ -135,9 +134,13 @@ let g:vim_json_syntax_conceal = 0
 
 let g:nvim_typescript#max_completion_detail = 10
 
-let g:deoplete#sources#go#gocode_binary = "~/go/bin/gocode"
+let g:echodoc#enable_at_startup = 1
+
+let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#sources#go#source_importer = 1
+
+let g:deoplete#sources#go#gocode_binary = "~/go/bin/gocode"
 
 "--- Keybinding ---"
 
