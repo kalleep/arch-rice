@@ -58,10 +58,10 @@ default_border pixel 1
 hide_edge_borders smart
 
 #Window colors
-#                       Border     Background  Text        Indicator   Child_border
-client.focused          $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
-client.unfocused        $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
-client.focused_inactive $darkBlue  #1d1f21     #949B96     #1d1f21     $darkBlue
+#                       Border        Background  Text        Indicator   Child_border
+client.focused          $darkMagenta  #1d1f21     #949B96     #1d1f21     $darkMagenta
+client.unfocused        $darkBlue     #1d1f21     #949B96     #1d1f21     $darkBlue
+client.focused_inactive $darkBlue     #1d1f21     #949B96     #1d1f21     $darkBlue
 
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

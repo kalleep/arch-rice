@@ -1,6 +1,6 @@
 
 [[ -f ~/.Xresources  ]] && xrdb -merge ~/.Xresources
 
-feh --bg-max ~/.wallpapers/city.jpg
+feh --bg-fill ~/.wallpapers/nordic.png
 
 exec i3

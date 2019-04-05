@@ -49,6 +49,7 @@ setupWallpapers() {
 	mkdir -p $HOME/.wallpapers
 	ln -sf "$(pwd)/.wallpapers/city.jpg" $HOME/.wallpapers
 	ln -sf "$(pwd)/.wallpapers/cosmos.png" $HOME/.wallpapers
+	ln -sf "$(pwd)/.wallpapers/nordic.png" $HOME/.wallpapers
 }
 
 setupScripts() {

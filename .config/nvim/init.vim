@@ -156,3 +156,6 @@ map <C-p> :GFiles<CR>
 tnoremap <Esc> <C-\><C-n>
 
 nmap - <Plug>(choosewin)
+
+noremap <PageUp> <Nop>
+noremap <PageDown> <Nop>
