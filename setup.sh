@@ -15,6 +15,12 @@ setupNeovim() {
 
 }
 
+setupVim() {
+
+	ln -sf "$(pwd)/.vimrc" $HOME
+
+}
+
 setupX() {
 
 	ln -sf "$(pwd)/.xinitrc" $HOME
@@ -65,6 +71,8 @@ setupCompton() {
 setupi3
 
 setupNeovim
+
+setupVim
 
 setupX
 

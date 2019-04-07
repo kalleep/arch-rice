@@ -10,7 +10,7 @@ plugins=(
   zsh-autosuggestions
 )
 
-export EDITOR=nvim
+export EDITOR=vim
 
 source /usr/share/nvm/init-nvm.sh
 
@@ -20,6 +20,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source $ZSH/oh-my-zsh.sh
 
-alias rice="cd ~/projects/arch-rice && nvim ."
+alias rice="cd ~/projects/arch-rice && vim ."
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
