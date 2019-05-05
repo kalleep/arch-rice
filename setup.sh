@@ -68,6 +68,15 @@ setupCompton() {
 
 }
 
+setupTmux() {
+	ln -sf "$(pwd)/.tmux.conf" $HOME
+}
+
+setupOutput() {
+	mkdir -p $HOME/scripts
+	ln -sf "$(pwd)/scripts/setoutput.sh" $HOME/scripts/setoutput.sh
+}
+
 setupi3
 
 setupNeovim
@@ -87,3 +96,7 @@ setupWallpapers
 setupScripts
 
 setupCompton
+
+setupTmux
+
+setupOutput
