@@ -13,6 +13,8 @@ Plug 'leafgarland/typescript-vim'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'maralla/completor-typescript'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'itchyny/lightline.vim'
@@ -132,6 +134,8 @@ let g:choosewin_overlay_enable = 1
 let g:vim_json_syntax_conceal = 0
 
 let g:echodoc#enable_at_startup = 1
+
+ let g:completor_gocode_binary = "~/go/bin/gocode"
 
 "--- Keybinding ---"
 
