@@ -25,3 +25,7 @@ alias rice="cd ~/projects/arch-rice && vim ."
 alias tmux="tmux -2"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+rmd () {
+	pandoc $1 | lynx -stdin
+}
