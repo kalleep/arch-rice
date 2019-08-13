@@ -46,8 +46,10 @@ setupPolybar() {
 
 setupRofi() {
 
-	mkdir -p $HOME/.config/rofi
+	mkdir -p $HOME/.config/rofi/themes
 	ln -sf "$(pwd)/.config/rofi/config" $HOME/.config/rofi
+	ln -sf "$(pwd)/.config/rofi/themes/colors.rasi" $HOME/.config/rofi/themes
+	ln -sf "$(pwd)/.config/rofi/themes/default.rasi" $HOME/.config/rofi/themes
 
 }
 

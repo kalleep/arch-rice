@@ -26,6 +26,8 @@ alias tmux="tmux -2"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH=$PATH:$(go env GOPATH)/bin
+
 rmd () {
 	pandoc $1 | lynx -stdin
 }
