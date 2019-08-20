@@ -54,6 +54,7 @@ gaps inner 10
 gaps outer 10
 smart_gaps on
 
+new_window 1pixel
 default_border pixel 1
 hide_edge_borders smart
 
@@ -74,6 +75,8 @@ exec --no-startup-id "setxkbmap -layout se"
 
 # Start dunst (notifications)
 exec --no-startup-id dunst
+
+exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 
 # Bindings
 
